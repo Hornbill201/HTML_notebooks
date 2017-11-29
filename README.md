@@ -170,6 +170,8 @@ A complete list of all attributes for each HTML element, is listed in our: [HTML
 
 ### Headings
 
+---
+
 Headings are defined with the ``<h1>`` to ``<h6>`` tags.
 
 ``<h1>`` defines the most important heading. ``<h6>`` defines the least important heading.
@@ -241,6 +243,8 @@ The ``<head>`` element is placed between the ``<html>`` tag and the ``<body>`` t
 
 ### HTML Paragraphs
 
+---
+
 #### HTML Display
 
 You cannot be sure how HTML will be displayed.
@@ -277,7 +281,7 @@ The text inside a ``<pre>`` element is displayed in a fixed-width font (usually 
 </pre>
 ```
 
-### HTML Tag Reference
+####  HTML Tag Reference
 
 | Tag     | Description                 |
 | ------- | --------------------------- |
@@ -285,3 +289,95 @@ The text inside a ``<pre>`` element is displayed in a fixed-width font (usually 
 | `<br>`  | Inserts a single line break |
 | `<pre>` | Defines pre-formatted text  |
 
+### HTML Styles
+
+#### The HTML Style Attribute
+
+Setting the style of an HTML element, can be done with the **style attribute**.
+
+The HTML style attribute has the following **syntax**:
+
+```html
+<tagname style="property:value;">
+```
+
+The ***property*** is a CSS property. The ***value*** is a CSS value.
+
+#### HTML Background Color
+
+The **background-color** property defines the background color for an HTML element.
+
+This example sets the background color for a page to powderblue:
+
+```html
+<body style="background-color:powderblue;">
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+</body>
+```
+
+#### HTML Text Color
+
+The **color** property defines the text color for an HTML element:
+
+```html
+<h1 style="color:blue;">This is a heading</h1>
+<p style="color:red;">This is a paragraph.</p>
+```
+
+#### HTML Fonts
+
+The **font-family** property defines the font to be used for an HTML element:
+
+```html
+<h1 style="font-family:verdana;">This is a heading</h1>
+<p style="font-family:courier;">This is a paragraph.</p>
+```
+
+#### HTML Text Size
+
+The **font-size** property defines the text size for an HTML element:
+
+```html
+<h1 style="font-size:300%;">This is a heading</h1>
+<p style="font-size:160%;">This is a paragraph.</p>
+```
+
+#### HTML Text Alignment
+
+The **text-align** property defines the horizontal text alignment for an HTML element:
+
+```html
+<h1 style="text-align:center;">Centered Heading</h1>
+<p style="text-align:center;">Centered paragraph.</p>
+```
+
+#### Chapter Summary
+
+- Use the **style** attribute for styling HTML elements
+- Use **background-color** for background color
+- Use **color** for text colors
+- Use **font-family** for text fonts
+- Use **font-size** for text sizes
+- Use **text-align** for text alignment
+
+### HTML Text Formatting
+
+---
+
+HTML also defines special **elements** for defining text with a special **meaning**.
+
+HTML uses elements like <b> and <i> for formatting output, like **bold** or *italic* text.
+
+Formatting elements were designed to display special types of text:
+
+- ``<b>`` - Bold text
+- ``<strong>`` - Important text
+- ``<i>`` - Italic text
+- ``<em>`` - Emphasized text
+- ``<mark>`` - Marked text
+- ``<small>`` - Small text
+- ``<del>`` - Deleted text
+- ``<ins>`` - Inserted text
+- ``<sub>`` - Subscript text
+- ``<sup>`` - Superscript text

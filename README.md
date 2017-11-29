@@ -381,3 +381,33 @@ Formatting elements were designed to display special types of text:
 - ``<ins>`` - Inserted text
 - ``<sub>`` - Subscript text
 - ``<sup>`` - Superscript text
+
+### HTML Quotation and Citation Elements
+
+#### HTML `<q>` for Short Quotations
+
+The HTML ``<q>`` element defines a short quotation.
+
+Browsers usually insert quotation marks around the ``<q>`` element.
+
+```html
+<p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+```
+
+#### HTML `<blockquote>` for Quotations
+
+The HTML ``<blockquote>`` element defines a section that is quoted from another source.
+
+Browsers usually indent ``<blockquote>`` elements.
+
+```html
+<p>Here is a quote from WWF's website:</p>
+<blockquote cite="http://www.worldwildlife.org/who/index.html">
+For 50 years, WWF has been protecting the future of nature.
+The world's leading conservation organization,
+WWF works in 100 countries and is supported by
+1.2 million members in the United States and
+close to 5 million globally.
+</blockquote>
+```
+

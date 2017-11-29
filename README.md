@@ -556,6 +556,22 @@ To use an external style sheet, add a link to it in the `<head>` section of the 
 </html>
 ```
 
+An external style sheet can be written in any text editor. The file must not contain any HTML code, and must be saved with a .css extension.
+
+Here is how the "styles.css" looks:
+
+```css
+body {
+    background-color: powderblue;
+}
+h1 {
+    color: blue;
+}
+p {
+    color: red;
+}
+```
+
 #### CSS Fonts
 
 The CSS **color** property defines the text color to be used.
@@ -613,7 +629,7 @@ p {
 
 #### CSS Margin
 
-The CSS **margin** property defines a margin (space) outside the border:
+The CSS **margin** property defines a margin (space) **outside** the border:
 
 ```html
 p {
@@ -622,3 +638,69 @@ p {
 }
 ```
 
+#### The id Attribute
+
+To define a specific style for one special element, add an id attribute to the element:
+
+```html
+<p id="p01">I am different</p>
+```
+
+then define a style for the element with the specific id:
+
+```html
+#p01 {
+    color: blue;
+}
+```
+
+#### The class Attribute
+
+To define a style for a special type of elements, add a class attribute to the element:
+
+```html
+<p class="error">I am different</p>
+```
+
+then define a style for the elements with the specific class:
+
+```html
+p.error {
+    color: red;
+}
+```
+
+#### External References
+
+External style sheets can be referenced with a full URL or with a path relative to the current web page.
+
+This example uses a full URL to link to a style sheet:
+
+```html
+<link rel="stylesheet" href="https://www.w3schools.com/html/styles.css">
+```
+
+This example links to a style sheet located in the html folder on the current web site:
+
+```html
+<link rel="stylesheet" href="/html/styles.css">
+```
+
+This example links to a style sheet located in the same folder as the current page:
+
+```html
+<link rel="stylesheet" href="styles.css">
+```
+
+#### Chapter Summary
+
+- Use the HTML **style** attribute for inline styling
+- Use the HTML **`<style>`** element to define internal CSS
+- Use the HTML **`<link>`** element to refer to an external CSS file
+- Use the HTML **`<head>`** element to store `<style>` and `<link>` elements
+- Use the CSS **color** property for text colors
+- Use the CSS **font-family** property for text fonts
+- Use the CSS **font-size** property for text sizes
+- Use the CSS **border** property for borders
+- Use the CSS **padding** property for space inside the border
+- Use the CSS **margin** property for space outside the border

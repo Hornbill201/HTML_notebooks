@@ -167,3 +167,121 @@ Below is an alphabetical list of some attributes often used in HTML:
 | title     | Specifies extra information about an element (displayed as a tool tip) |
 
 A complete list of all attributes for each HTML element, is listed in our: [HTML Attribute Reference](https://www.w3schools.com/tags/ref_attributes.asp).
+
+### Headings
+
+Headings are defined with the ``<h1>`` to ``<h6>`` tags.
+
+``<h1>`` defines the most important heading. ``<h6>`` defines the least important heading.
+
+Example
+
+```html
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+```
+
+####  Bigger Headings
+
+Each HTML heading has a default size. However, you can specify the size for any heading with the style attribute:
+
+```html
+<h1 style="font-size:60px;">Heading 1</h1>
+```
+
+#### HTML Horizontal Rules
+
+The ``<hr>`` tag defines a thematic break in an HTML page, and is most often displayed as a horizontal rule.
+
+The ``<hr>`` element is used to separate content (or define a change) in an HTML page:
+
+```html
+<h1>This is heading 1</h1>
+<p>This is some text.</p>
+<hr>
+<h2>This is heading 2</h2>
+<p>This is some other text.</p>
+<hr>
+```
+
+#### The HTML `<head>` Element
+
+The HTML ``<head>`` element has nothing to do with HTML headings.
+
+The ``<head>`` element is a container for metadata. HTML metadata is data about the HTML document. Metadata is not displayed.
+
+The ``<head>`` element is placed between the ``<html>`` tag and the ``<body>`` tag:
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My First HTML</title>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+...
+```
+
+#### HTML Tag Reference
+
+| Tag              | Description                              |
+| ---------------- | ---------------------------------------- |
+| `<html>`         | Defines the root of an HTML document     |
+| `<body>`         | Defines the document's body              |
+| `<head>`         | A container for all the head elements (title, scripts, styles, meta information, and more) |
+| `<h1>` to `<h6>` | Defines HTML headings                    |
+| `<hr>`           | Defines a thematic change in the content |
+
+### HTML Paragraphs
+
+#### HTML Display
+
+You cannot be sure how HTML will be displayed.
+
+Large or small screens, and resized windows will create different results.
+
+With HTML, you cannot change the output by adding extra spaces or extra lines in your HTML code.
+
+#### HTML Line Breaks
+
+The HTML ``<br>`` element defines a **line break**.
+
+Use ``<br>`` if you want a line break (a new line) without starting a new paragraph:
+
+```html
+<p>This is<br>a paragraph<br>with line breaks.</p>
+```
+
+#### The HTML ``<pre>`` Element
+
+The HTML ``<pre>`` element defines preformatted text.
+
+The text inside a ``<pre>`` element is displayed in a fixed-width font (usually Courier), and it preserves both spaces and line breaks:
+
+```html
+<pre>
+  My Bonnie lies over the ocean.
+
+  My Bonnie lies over the sea.
+
+  My Bonnie lies over the ocean.
+
+  Oh, bring back my Bonnie to me.
+</pre>
+```
+
+### HTML Tag Reference
+
+| Tag     | Description                 |
+| ------- | --------------------------- |
+| `<p>`   | Defines a paragraph         |
+| `<br>`  | Inserts a single line break |
+| `<pre>` | Defines pre-formatted text  |
+

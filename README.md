@@ -367,7 +367,7 @@ The **text-align** property defines the horizontal text alignment for an HTML el
 
 HTML also defines special **elements** for defining text with a special **meaning**.
 
-HTML uses elements like <b> and <i> for formatting output, like **bold** or *italic* text.
+HTML uses elements like ``<b>`` and ``<i>`` for formatting output, like **bold** or *italic* text.
 
 Formatting elements were designed to display special types of text:
 
@@ -409,5 +409,72 @@ WWF works in 100 countries and is supported by
 1.2 million members in the United States and
 close to 5 million globally.
 </blockquote>
+```
+
+#### HTML `<abbr>` for Abbreviations
+
+The HTML ``<abbr>`` element defines an abbreviation or an acronym.
+
+Marking abbreviations can give useful information to browsers, translation systems and search-engines.
+
+```html
+<p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+```
+
+#### HTML `<address>` for Contact Information
+
+The HTML ``<address>`` element defines contact information (author/owner) of a document or an article.
+
+The ``<address>`` element is usually displayed in italic. Most browsers will add a line break before and after the element.
+
+```html
+<address>
+Written by John Doe.<br> 
+Visit us at:<br>
+Example.com<br>
+Box 564, Disneyland<br>
+USA
+</address>
+```
+
+#### HTML `<cite>` for Work Title
+
+The HTML ``<cite>`` element defines the title of a work.
+
+Browsers usually display ``<cite>`` elements in italic.
+
+```html
+<p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+```
+
+#### HTML `<bdo>` for Bi-Directional Override
+
+The HTML ``<bdo>`` element defines bi-directional override.
+
+The ``<bdo>`` element is used to override the current text direction:
+
+```html
+<bdo dir="rtl">This text will be written from right to left</bdo>
+```
+
+####HTML Quotation and Citation Elements
+
+| Tag            | Description                              |
+| -------------- | ---------------------------------------- |
+| `<abbr>`       | Defines an abbreviation or acronym       |
+| `address`      | Defines contact information for the author/owner of a document |
+| `bdo`          | Defines the text direction               |
+| `<blockquote>` | Defines a section that is quoted from another source |
+| `<cite>`       | Defines the title of a work              |
+| `<q>`          | Defines a short inline quotation         |
+
+### HTML Comments
+
+####HTML Comment Tags
+
+You can add comments to your HTML source by using the following syntax:
+
+```html
+<!-- Write your comments here -->
 ```
 

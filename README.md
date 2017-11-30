@@ -850,6 +850,12 @@ This example links to a page located in the same folder as the current page:
 <a href="default.asp">HTML tutorial</a>
 ```
 
+#### Remove the underline from the link
+
+```html
+<a href="html_images.asp" target="_blank" style="text-decoration:none">HTML Images</a>
+```
+
 #### Chapter Summary
 
 - Use the **`<a>`** element to define a link
@@ -857,5 +863,5 @@ This example links to a page located in the same folder as the current page:
 - Use the **target** attribute to define where to open the linked document
 - Use the **`<img>`** element (inside `<a>`) to use an image as a link
 - Use the **id** attribute (id="*value*") to define bookmarks in a page
-- Use the **href **attribute (href="#*value*") to link to the bookmark
+- Use the **href** attribute (href="#*value*") to link to the bookmark
 

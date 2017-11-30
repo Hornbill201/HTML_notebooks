@@ -865,3 +865,5 @@ This example links to a page located in the same folder as the current page:
 - Use the **id** attribute (id="*value*") to define bookmarks in a page
 - Use the **href** attribute (href="#*value*") to link to the bookmark
 
+### HTML Images
+

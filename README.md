@@ -704,3 +704,158 @@ This example links to a style sheet located in the same folder as the current pa
 - Use the CSS **border** property for borders
 - Use the CSS **padding** property for space inside the border
 - Use the CSS **margin** property for space outside the border
+
+### HTML Links
+
+---
+
+#### HTML Links
+
+HTML links are hyperlinks.
+
+You can click on a link and jump to another document.
+
+When you move the mouse over a link, the mouse arrow will turn into a little hand.
+
+```html
+<a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
+```
+
+#### Local Links
+
+The example above used an absolute URL (A full web address).
+
+A local link (link to the same web site) is specified with a relative URL (without http://www....).
+
+```html
+<a href="html_images.asp">HTML Images</a>
+```
+
+#### HTML Link Colors
+
+By default, a link will appear like this (in all browsers):
+
+- An unvisited link is underlined and blue
+- A visited link is underlined and purple
+- An active link is underlined and red
+
+You can change the default colors, by using styles:
+
+```html
+<style>
+a:link {
+    color: green; 
+    background-color: transparent; 
+    text-decoration: none;
+}
+
+a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
+</style>
+```
+
+#### HTML Links - The target Attribute
+
+The **target** attribute specifies where to open the linked document.
+
+The target attribute can have one of the following values:
+
+- _blank - Opens the linked document in a new window or tab
+- _self - Opens the linked document in the same window/tab as it was clicked (this is default)
+- _parent - Opens the linked document in the parent frame
+- _top - Opens the linked document in the full body of the window
+- framename - Opens the linked document in a named frame
+
+This example will open the linked document in a new browser window/tab:
+
+```html
+<a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
+```
+
+**Tip:** If your webpage is locked in a frame, you can use target="_top" to break out of the frame:
+
+```html
+<a href="https://www.w3schools.com/html/" target="_top">HTML5 tutorial!</a>
+```
+
+#### HTML Links - Image as Link
+
+It is common to use images as links:
+
+```html
+<a href="default.asp">
+  <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
+</a>
+```
+
+#### HTML Links - Create a Bookmark
+
+ HTML bookmarks are used to allow readers to jump to specific parts of a Web page.
+
+Bookmarks can be useful if your webpage is very long.
+
+To make a bookmark, you must first create the bookmark, and then add a link to it.
+
+When the link is clicked, the page will scroll to the location with the bookmark.
+
+First, create a bookmark with the id attribute:
+
+Then, add a link to the bookmark ("Jump to Chapter 4"), from within the same page:
+
+```html
+<h2 id="C4">Chapter 4</h2>
+<a href="#C4">Jump to Chapter 4</a>
+```
+
+Or, add a link to the bookmark ("Jump to Chapter 4"), from another page:
+
+```html
+<a href="html_demo.html#C4">Jump to Chapter 4</a>
+```
+
+#### External Paths
+
+External pages can be referenced with a full URL or with a path relative to the current web page.
+
+This example uses a full URL to link to a web page:
+
+```html
+<a href="https://www.w3schools.com/html/default.asp">HTML tutorial</a>
+```
+
+This example links to a page located in the html folder on the current web site:
+
+```html
+<a href="/html/default.asp">HTML tutorial</a>
+```
+
+This example links to a page located in the same folder as the current page:
+
+```html
+<a href="default.asp">HTML tutorial</a>
+```
+
+#### Chapter Summary
+
+- Use the **`<a>`** element to define a link
+- Use the **href** attribute to define the link address
+- Use the **target** attribute to define where to open the linked document
+- Use the **`<img>`** element (inside `<a>`) to use an image as a link
+- Use the **id** attribute (id="*value*") to define bookmarks in a page
+- Use the **href **attribute (href="#*value*") to link to the bookmark
+

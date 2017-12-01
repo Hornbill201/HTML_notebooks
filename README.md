@@ -906,3 +906,106 @@ img {
 </html>
 ```
 
+#### Image as a Link
+
+ To use an image as a link, put the `<img>` tag inside the `<a>` tag:
+
+```html
+<a href="default.asp">
+  <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
+</a>
+```
+
+#### Image Floating
+
+Use the CSS **float** property to let the image float to the right or to the left of a text:
+
+```html
+<p><img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">
+The image will float to the right of the text.</p>
+
+<p><img src="smiley.gif" alt="Smiley face" style="float:left;width:42px;height:42px;">
+The image will float to the left of the text.</p>
+```
+
+#### Image Maps
+
+Use the `<map>` tag to define an image-map. An image-map is an image with clickable areas.
+
+In the image below, click on the computer, the phone, or the cup of coffee:
+
+```html
+<img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+  <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+</map>
+```
+
+The name attribute of the `<map>` tag is associated with the `<img>`'s usemap attribute and creates a relationship between the image and the map.
+
+The `<map>` tag contains a number of `<area>` tags, that defines the clickable areas in the image-map.
+
+#### Background Image
+
+To add a background image on an HTML element, use the CSS property `background-image`:
+
+```html
+<body style="background-image:url('clouds.jpg')">
+<h2>Background Image</h2>
+</body>
+```
+
+To add a background image on a paragraph, specify the background-image property on the P element:
+
+```html
+<body>
+
+<p style="background-image:url('clouds.jpg')">
+...
+</p>
+
+</body>
+```
+
+#### The `<picture>` Element
+
+HTML5 introduced the `<picture>` element to add more flexibility when specifying image resources.
+
+The `<picture>` element contains a number of `<source>` elements, each referring to different image sources. This way the browser can choose the image that best fit the current view and/or device.
+
+Each `<source>` element have attributes describing when their image is the most suitable.
+
+The browser will use the first `<source>` element with matching attribute values, and ignore any following `<source>` elements.
+
+Show one picture if the browser window (viewport) is a minimum of 650 pixels, and another image if not, but larger than 465 pixels.
+
+```html
+<picture>
+<source media="(min-width: 650px)" srcset="img_pink_flowers.jpg">
+<source media="(min-width: 465px)" srcset="img_white_flower.jpg">
+<img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+</picture>
+```
+
+**Note:** Always specify an `<img>` element as the last child element of the `<picture>` element. The `<img>` element is used by browsers that to not support the `<picture>` element, or if none of the `<source>` tags matched.
+
+#### HTML Screen Readers
+
+A screen reader is a software program that reads the HTML code, converts the text, and allows the user to "listen" to the content. Screen readers are useful for people who are blind, visually impaired, or learning disabled.
+
+#### Chapter Summary
+
+- Use the HTML **`<img>`** element to define an image
+- Use the HTML **src** attribute to define the URL of the image
+- Use the HTML **alt** attribute to define an alternate text for an image, if it cannot be displayed
+- Use the HTML **width** and **height** attributes to define the size of the image
+- Use the CSS **width** and **height** properties to define the size of the image (alternatively)
+- Use the CSS **float** property to let the image float
+- Use the HTML **`<map>`** element to define an image-map
+- Use the HTML **`<area>`** element to define the clickable areas in the image-map
+- Use the HTML `<img>`'s element **usemap** attribute to point to an image-map
+- Use the HTML **`<picture>`** element to show different images for different devices
+

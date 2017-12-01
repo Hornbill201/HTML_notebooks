@@ -867,3 +867,42 @@ This example links to a page located in the same folder as the current page:
 
 ### HTML Images
 
+```html
+<img src="pulpitrock.jpg" alt="Mountain View">
+```
+
+#### Image Size - Width and Height
+
+You can use the **style** attribute to specify the width and height of an image.
+
+```html
+<img src="img_girl.jpg" alt="Girl in a jacket" style="width:500px;height:600px;">
+```
+
+Alternatively, you can use the **width** and **height** attributes:
+
+```html
+<img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
+```
+
+However, we suggest using the style attribute. It prevents styles sheets from changing the size of images:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+img { 
+    width:100%; 
+}
+</style>
+</head>
+<body>
+
+<img src="html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+<img src="html5.gif" alt="HTML5 Icon" width="128" height="128">
+
+</body>
+</html>
+```
+

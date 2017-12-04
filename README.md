@@ -1094,3 +1094,129 @@ th {
 
 **Note: All these boarder, padding should be included in the `<style>` attribute. **
 
+#### HTML Table - Adding Border Spacing
+
+Border spacing specifies the space between the cells.
+
+To set the border spacing for a table, use the CSS **border-spacing** property:
+
+```html
+table {
+    border-spacing: 5px;
+}
+```
+
+#### HTML Table - Cells that Span Many Columns
+
+To make a cell span more than one column, use the **colspan** attribute:
+
+```html
+<table style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th colspan="2">Telephone</th>
+  </tr>
+  <tr>
+    <td>Bill Gates</td>
+    <td>55577854</td>
+    <td>55577855</td>
+  </tr>
+</table>
+```
+
+#### HTML Table - Cells that Span Many Rows
+
+```html
+<table style="width:100%">
+  <tr>
+    <th>Name:</th>
+    <td>Bill Gates</td>
+  </tr>
+  <tr>
+    <th rowspan="2">Telephone:</th>
+    <td>55577854</td>
+  </tr>
+  <tr>
+    <td>55577855</td>
+  </tr>
+</table>
+```
+
+#### HTML Table - Adding a Caption
+
+```html
+<table style="width:100%">
+  <caption>Monthly savings</caption>
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+  <tr>
+    <td>February</td>
+    <td>$50</td>
+  </tr>
+</table>
+```
+
+**Note:** The `<caption>` tag must be inserted immediately after the `<table>` tag.
+
+#### A Special Style for One Table
+
+To define a special style for a special table, add an **id** attribute to the table:
+
+```html
+table#t01 {
+    width: 100%; 
+    background-color: #f1f1c1;
+}
+```
+
+```html
+<table id="t01">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td> 
+    <td>94</td>
+  </tr>
+</table>
+```
+
+**Add more styles**
+
+```html
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#t01 th {
+    color: white;
+    background-color: black;
+}
+```
+
+#### Chapter Summary
+
+- Use the HTML **`<table>`** element to define a table
+- Use the HTML **`<tr>`** element to define a table row
+- Use the HTML **`<td>`** element to define a table data
+- Use the HTML **`<th>`** element to define a table heading
+- Use the HTML **`<caption>`** element to define a table caption
+- Use the CSS **border** property to define a border
+- Use the CSS **border-collapse** property to collapse cell borders
+- Use the CSS **padding** property to add padding to cells
+- Use the CSS **text-align** property to align cell text
+- Use the CSS **border-spacing** property to set the spacing between cells
+- Use the **colspan** attribute to make a cell span many columns
+- Use the **rowspan** attribute to make a cell span many rows
+- Use the **id** attribute to uniquely define one table

@@ -1009,3 +1009,88 @@ A screen reader is a software program that reads the HTML code, converts the tex
 - Use the HTML `<img>`'s element **usemap** attribute to point to an image-map
 - Use the HTML **`<picture>`** element to show different images for different devices
 
+
+### HTML Tables
+
+---
+
+#### Defining an HTML Table
+
+An HTML table is defined with the **`<table>`** tag.
+
+Each table row is defined with the **`<tr>`** tag. A table header is defined with the **`<th>`** tag. By default, table headings are bold and centered. A table data/cell is defined with the **`<td>`** tag.
+
+```html
+<table style="width:100%">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td> 
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td> 
+    <td>94</td>
+  </tr>
+</table>
+```
+
+**Note:** The `<td>` elements are the data containers of the table.
+They can contain all sorts of HTML elements; text, images, lists, other tables, etc.
+
+#### HTML Table - Adding a Border
+
+If you do not specify a border for the table, it will be displayed without borders.
+
+A border is set using the CSS **border** property:
+
+```html
+table, th, td {
+    border: 1px solid black;
+}
+```
+
+#### HTML Table - Collapsed Borders
+
+If you want the borders to collapse into one border, add the CSS **border-collapse** property:
+
+```html
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+```
+
+#### HTML Table - Adding Cell Padding
+
+Cell padding specifies the space between the cell content and its borders.
+
+If you do not specify a padding, the table cells will be displayed without padding.
+
+To set the padding, use the CSS **padding** property:
+
+```html
+th, td {
+    padding: 15px;
+}
+```
+
+#### HTML Table - Left-align Headings
+
+By default, table headings are bold and centered.
+
+To left-align the table headings, use the CSS **text-align** property:
+
+```html
+th {
+    text-align: left;
+}
+```
+
+**Note: All these boarder, padding should be included in the `<style>` attribute. **
+

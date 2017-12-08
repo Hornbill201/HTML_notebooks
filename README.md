@@ -1498,3 +1498,54 @@ Different tags, like `<h2>` and `<p>`, can have the same class name and thereby 
 <p class="city">Paris is the capital of France</p>
 ```
 
+### HTML Iframes
+
+An iframe is used to display a web page within a web page.
+
+#### Iframe Syntax
+
+An HTML iframe is defined with the **`<iframe>`** tag:
+
+```html
+<iframe src="URL"></iframe>
+```
+
+The **src** attribute specifies the URL (web address) of the inline frame page.
+
+#### Iframe - Set Height and Width
+
+Use the **height** and **width** attributes to specify the size of the iframe.
+
+The attribute values are specified in pixels by default, but they can also be in percent (like "80%").
+
+```html
+<iframe src="demo_iframe.htm" height="200" width="300"></iframe>
+```
+
+#### Iframe - Remove the Border
+
+By default, an iframe has a border around it.
+
+To remove the border, add the **style** attribute and use the CSS **border** property:
+
+```html
+<iframe src="demo_iframe.htm" style="border:none;"></iframe>
+```
+
+With CSS, you can also change the size, style and color of the iframe's border:
+
+```html
+<iframe src="demo_iframe.htm" style="border:2px solid grey;"></iframe>
+```
+
+#### Iframe - Target for a Link
+
+An iframe can be used as the target frame for a link.
+
+The **target** attribute of the link must refer to the **name** attribute of the iframe:
+
+```html
+<iframe src="demo_iframe.htm" name="iframe_a"></iframe>
+<p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+```
+

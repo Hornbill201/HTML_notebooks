@@ -1436,3 +1436,65 @@ When used together with CSS, the `<span>` element can be used to style parts of 
 <h1>My <span style="color:red">Important</span> Heading</h1>
 ```
 
+### HTML The class Attribute
+
+---
+
+#### Using the class Attribute
+
+The class attribute specifies one or more class names for an HTML element.
+
+The class name can be used by CSS and JavaScript to perform certain tasks for elements with the specified class name.
+
+Using CSS to style all elements with the class name "city":
+
+```html
+<style>
+.city {
+    background-color: tomato;
+    color: white;
+    padding: 10px;
+} 
+</style>
+
+<h2 class="city">London</h2>
+<p>London is the capital of England.</p>
+
+<h2 class="city">Paris</h2>
+<p>Paris is the capital of France.</p>
+
+<h2 class="city">Tokyo</h2>
+<p>Tokyo is the capital of Japan.</p>
+```
+
+#### Multiple Classes
+
+HTML elements can have more than one class name, each class name must be separated by a space.
+
+```html
+<style>
+.city {
+  background-color: tomato;
+  color: white;
+  padding: 10px;
+} 
+.main {
+  text-align: center;
+}
+</style>
+<body>
+
+<h2 class="city main">London</h2>
+<h2 class="city">Paris</h2>
+<h2 class="city">Tokyo</h2>
+```
+
+#### Same Class, Different Tag
+
+Different tags, like `<h2>` and `<p>`, can have the same class name and thereby share the same style:
+
+```html
+<h2 class="city">Paris</h2>
+<p class="city">Paris is the capital of France</p>
+```
+

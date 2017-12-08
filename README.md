@@ -1386,3 +1386,53 @@ li a:hover {
 - Lists can be nested inside lists
 - List items can contain other HTML elements
 - Use the CSS property **float:left** or **display:inline **to display a list horizontally
+
+### HTML Block and Inline Elements
+
+Every HTML element has a default display value depending on what type of element it is. The default display value for most elements is block or inline.
+
+The `<div>` element is a block-level element.
+
+```html
+<div>Hello</div>
+<div>World</div>
+```
+
+Inline elements in HTML:
+
+```html
+<a> <abbr> <acronym> <b> <bdo>
+<big> <br> <button> <cite> <code>
+<dfn> <em> <i> <img> <input> 
+<kbd> <label> <map> <object> <q> 
+<samp> <script> <select> <small> <span> 
+<strong> <sub> <sup> <textarea> <time> <tt> <var>
+```
+
+#### The `<div>` Element
+
+The `<div>` element is often used as a container for other HTML elements.
+
+The `<div>` element has no required attributes, but both **style** and **class** are common.
+
+When used together with CSS, the `<div>` element can be used to style blocks of content:
+
+```html
+<div style="background-color:black;color:white;padding:20px;">
+  <h2>London</h2>
+  <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+</div>
+```
+
+### The `<span>` Element
+
+The `<span>` element is often used as a container for some text.
+
+The `<span>` element has no required attributes, but both **style** and **class** are common.
+
+When used together with CSS, the `<span>` element can be used to style parts of the text:
+
+```html
+<h1>My <span style="color:red">Important</span> Heading</h1>
+```
+

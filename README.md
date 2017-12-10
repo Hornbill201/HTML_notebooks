@@ -1549,3 +1549,98 @@ The **target** attribute of the link must refer to the **name** attribute of the
 <p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
 ```
 
+### HTML JavaScript
+
+---
+
+#### The HTML `<script>` Tag
+
+The **`<script>`** tag is used to define a client-side script (JavaScript).
+
+The `<script>` element either contains scripting statements, or it points to an external script file through the **src** attribute.
+
+Common uses for JavaScript are image manipulation, form validation, and dynamic changes of content.
+
+To select an HTML element, JavaScript very often use the `document.getElementById(id)` method.
+
+This JavaScript example writes "Hello JavaScript!" into an HTML element with id="demo":
+
+```html
+<script>
+document.getElementById("demo").innerHTML = "Hello JavaScript!";
+</script>
+```
+
+### HTML File Paths
+
+---
+
+A file path describes the location of a file in a web site's folder structure.
+
+File paths are used when linking to external files like:
+
+- Web pages
+- Images
+- Style sheets
+- JavaScripts
+
+#### Absolute File Paths
+
+An absolute file path is the full URL to an internet file:
+
+```html
+<img src="https://www.w3schools.com/images/picture.jpg" alt="Mountain">
+```
+
+#### Relative File Paths
+
+A relative file path points to a file relative to the current page.
+
+In this example the file path points to a file in the images folder located at the root of the current web:
+
+```html
+<img src="/images/picture.jpg" alt="Mountain">
+```
+
+In this example the file path points to a file in the images folder located in the current folder:
+
+```html
+<img src="images/picture.jpg" alt="Mountain">
+```
+
+In this example the file path points to a file in the images folder located in the folder one level above the current folder:
+
+```html
+<img src="../images/picture.jpg" alt="Mountain">
+```
+
+#### Best Practice
+
+It is a best practice to use relative file paths (if possible).
+
+When using relative file paths, your web pages will not be bound to your current base URL. All links will work on your own computer (localhost) as well as on your current public domain and your future public domains. 
+
+### HTML Head
+
+#### The HTML `<head>` Element
+
+The **`<head>`** element is a container for metadata (data about data) and is placed between the `<html>` tag and the `<body>` tag.
+
+HTML metadata is data about the HTML document. Metadata is not displayed.
+
+Metadata typically define the document title, character set, styles, links, scripts, and other meta information.
+
+The following tags describe metadata: `<title>`, `<style>`, `<meta>`, `<link>`, `<script>`, and `<base>`.
+
+#### The HTML `<title>` Element
+
+The **`<title>`** element defines the title of the document, and is required in all HTML/XHTML documents.
+
+The `<title>` element:
+
+- defines a title in the browser tab
+- provides a title for the page when it is added to favorites
+- displays a title for the page in search engine results
+
+A simple HTML document:
+

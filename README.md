@@ -1644,3 +1644,160 @@ The `<title>` element:
 
 A simple HTML document:
 
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Page Title</title>
+</head>
+
+<body>
+The content of the document......
+</body>
+
+</html>
+```
+
+#### The HTML `<style>` Element
+
+The **`<style>`** element is used to define style information for a single HTML page:
+
+```html
+<style>
+  body {background-color: powderblue;}
+  h1 {color: red;}
+  p {color: blue;}
+</style>
+```
+
+#### The HTML `<link>` Element
+
+The **`<link>`** element is used to link to external style sheets:
+
+```html
+<link rel="stylesheet" href="mystyle.css">
+```
+
+#### The HTML `<meta>` Element
+
+The **`<meta>`** element is used to specify which character set is used, page description, keywords, author, and other metadata.
+
+Metadata is used by browsers (how to display content), by search engines (keywords), and other web services.
+
+Define the character set used:
+
+```html
+<meta charset="UTF-8">
+```
+
+Define a description of your web page:
+
+```html
+<meta name="description" content="Free Web tutorials">
+```
+
+Define keywords for search engines:
+
+```html
+<meta name="keywords" content="HTML, CSS, XML, JavaScript">
+```
+
+Define the author of a page:
+
+```html
+<meta name="author" content="John Doe">
+```
+
+Refresh document every 30 seconds:
+
+```html
+<meta http-equiv="refresh" content="30">
+```
+
+Example of `<meta>` tags:
+
+```html
+<meta charset="UTF-8">
+<meta name="description" content="Free Web tutorials">
+<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+<meta name="author" content="John Doe">
+```
+
+#### Setting The Viewport
+
+HTML5 introduced a method to let web designers take control over the viewport, through the `<meta>` tag.
+
+The viewport is the user's visible area of a web page. It varies with the device, and will be smaller on a mobile phone than on a computer screen.
+
+You should include the following `<meta>` viewport element in all your web pages:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+A `<meta>` viewport element gives the browser instructions on how to control the page's dimensions and scaling.
+
+The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+
+The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.
+
+Here is an example of a web page *without* the viewport meta tag, and the same web page *with* the viewport meta tag:
+
+#### The HTML `<script>` Element
+
+The `<script>` element is used to define client-side JavaScripts.
+
+This JavaScript writes "Hello JavaScript!" into an HTML element with id="demo":
+
+```html
+<script>
+function myFunction {
+    document.getElementById("demo").innerHTML = "Hello JavaScript!";
+}
+</script>
+```
+
+#### The HTML `<base>` Element
+
+The `<base>` element specifies the base URL and base target for all relative URLs in a page:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <base href="https://www.w3schools.com/images/" target="_blank">
+</head>
+<body>
+
+<img src="html5.gif">
+<p>Since we have specified a base URL, the browser will look for the image "html5.gif" at "https://www.w3schools.com/images/html5.gif"</p>
+
+<p><a href="https://www.w3schools.com">W3Schools</a></p>
+<p>The link above opens in a new window. This is because the base target is set to "_blank".</p>
+
+</body>
+</html>
+```
+
+#### Omitting `<html>`, `<head>` and `<body>`?
+
+According to the HTML5 standard; the `<html>`, the `<body>`, and the `<head>` tag can be omitted.
+
+The following code will validate as HTML5:
+
+```html
+<!DOCTYPE html>
+<title>Page Title</title>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+```
+
+**Note:**
+
+W3Schools does not recommend omitting the `<html>` and `<body>` tags. Omitting these tags can crash DOM or XML software and produce errors in older browsers (IE9).
+
+However, omitting the `<head>` tag has been a common practice for quite some time now.
+

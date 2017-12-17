@@ -1801,3 +1801,35 @@ W3Schools does not recommend omitting the `<html>` and `<body>` tags. Omitting t
 
 However, omitting the `<head>` tag has been a common practice for quite some time now.
 
+### HTML Layouts
+
+---
+
+#### HTML Layout Elements
+
+Websites often display content in multiple columns (like a magazine or newspaper).
+
+HTML5 offers new semantic elements that define the different parts of a web page:
+
+![HTML5 Semantic Elements](imgs/img_sem_elements.gif)
+
+
+
+- `<header>` - Defines a header for a document or a section
+- `<nav>` - Defines a container for navigation links
+- `<section>` - Defines a section in a document
+- `<article>` - Defines an independent self-contained article
+- `<aside>` - Defines content aside from the content (like a sidebar)
+- `<footer>` - Defines a footer for a document or a section
+- `<details>` - Defines additional details
+- `<summary>` - Defines a heading for the `<details>` element
+
+#### HTML Layout Techniques
+
+There are four different ways to create multicolumn layouts. Each way has its pros and cons:
+
+- HTML tables
+- CSS float property
+- CSS framework
+- CSS flexbox
+

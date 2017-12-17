@@ -1835,9 +1835,131 @@ There are four different ways to create multicolumn layouts. Each way has its pr
 
 ### HTML Responsive Web Design
 
+---
+
 Responsive Web Design makes your web page look good on all devices (desktops, tablets, and phones).
 
 Responsive Web Design is about using HTML and CSS to resize, hide, shrink, enlarge, or move the content to make it look good on any screen:
 
 ![img](imgs/img_rwd_desktop.jpg)
+
+
+
+#### Setting the Viewport
+
+When making responsive web pages, add the following `<meta>` element in all your web pages:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+This will set the viewport of your page, which will give the browser instructions on how to control the page's dimensions and scaling.
+
+#### Responsive Images
+
+Responsive images are images that scale nicely to fit any browser size.
+
+#### Using the width Property
+
+If the width property is set to 100%, the image will be responsive and scale up and down:
+
+```html
+<img src="img_girl.jpg" style="width:100%;">
+```
+
+#### Using the max-width Property
+
+If the max-width property is set to 100%, the image will scale down if it has to, but never scale up to be larger than its original size:
+
+```html
+<img src="img_girl.jpg" style="max-width:100%;height:auto;">
+```
+
+#### Show Different Images Depending on Browser Width
+
+The HTML `<picture>` element allows you to define different images for different browser window sizes.
+
+Resize the browser window to see how the image below change depending on the width:
+
+```html
+<picture>
+  <source srcset="img_smallflower.jpg" media="(max-width: 600px)">
+  <source srcset="img_flowers.jpg" media="(max-width: 1500px)">
+  <source srcset="flowers.jpg">
+  <img src="img_smallflower.jpg" alt="Flowers">
+</picture>
+```
+
+#### Responsive Text Size
+
+The text size can be set with a "vw" unit, which means the "viewport width".
+
+That way the text size will follow the size of the browser window:
+
+```html
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+<h1 style="font-size:10vw;">Hello World</h1>
+<p style="font-size:5vw;">Resize the browser window to see how the text size scales.</p>
+<p style="font-size:5vw;">Use the "vw" unit when sizing the text. 10vw will set the size to 10% of the viewport width.</p>
+</body>
+</html>
+```
+
+#### Media Queries
+
+In addition to resize text and images, it is also common to use media queries in responsive web pages.
+
+With media queries you can define completely different styles for different browser sizes.
+
+Example: resize the browser window to see that the three div elements below will display horizontally on large screens and stacked vertically on small screens:
+
+```html
+<style>
+.left, .right {
+  float:left;
+  width:20%; /*The width is 20%, by default*/
+}
+
+.main {
+  float:left;
+  width:60%; /*The width is 60%, by default*/
+}
+
+/*Use a media query to add a breakpoint at 800px:*/
+@media (max-width:800px) {
+  .left, .main, .right {
+    width:100%; /*The width is 100%, when the viewport is 800px or smaller*/
+  }
+}
+</style>
+```
+
+To learn more about Media Queries and Responsive Web Design, read [RWD Tutorial](https://www.w3schools.com/css/css_rwd_intro.asp) on w3schools.
+
+#### Responsive Web Page - Full Example
+
+A responsive web page should look good on large desktop screens and small mobile phones.
+
+![img](imgs/img_responsive_full.png)
+
+#### Responsive Web Design - Frameworks
+
+There are many existing CSS Frameworks that offer Responsive Design.
+
+They are free, and easy to use.
+
+#### Using W3.CSS
+
+A great way to create a responsive design, is to use a responsive style sheet, like [W3.CSS](https://www.w3schools.com/w3css/default.asp)
+
+W3.CSS makes it easy to develop sites that look nice at any size; desktop, laptop, tablet, or phone:
+
+#### Bootstrap
+
+Another popular framework is Bootstrap, it uses HTML, CSS and jQuery to make responsive web pages.
+
+To learn more about Bootstrap, go to our [Bootstrap Tutorial](https://www.w3schools.com/bootstrap/default.asp).
 

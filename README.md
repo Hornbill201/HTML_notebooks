@@ -1833,3 +1833,11 @@ There are four different ways to create multicolumn layouts. Each way has its pr
 - CSS framework
 - CSS flexbox
 
+### HTML Responsive Web Design
+
+Responsive Web Design makes your web page look good on all devices (desktops, tablets, and phones).
+
+Responsive Web Design is about using HTML and CSS to resize, hide, shrink, enlarge, or move the content to make it look good on any screen:
+
+![img](imgs/img_rwd_desktop.jpg)
+

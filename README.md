@@ -1963,3 +1963,73 @@ Another popular framework is Bootstrap, it uses HTML, CSS and jQuery to make res
 
 To learn more about Bootstrap, go to our [Bootstrap Tutorial](https://www.w3schools.com/bootstrap/default.asp).
 
+### HTML Computer Code Elements
+
+Computer code
+
+```html
+<code>
+x = 5;<br>
+y = 6;<br>
+z = x + y;
+</code>
+```
+
+#### HTML `<kbd>` For Keyboard Input
+
+The HTML **`<kbd>`** element represents user input, like keyboard input or voice commands.
+
+Text surrounded by `<kbd>` tags is typically displayed in the browser's default monospace font:
+
+```html
+<p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
+```
+
+#### HTML `<samp>` For Program Output
+
+The HTML **`<samp>`** element represents output from a program or computing system.
+
+Text surrounded by `<samp>` tags is typically displayed in the browser's default monospace font:
+
+```html
+<p>If you input wrong value, the program will return <samp>Error!</samp></p>
+```
+
+#### HTML `<code>` For Computer Code
+
+The HTML **`<code>`** element defines a fragment of computer code.
+
+Text surrounded by `<code>` tags is typically displayed in the browser's default monospace font: 
+
+```html
+<code>
+x = 5;
+y = 6;
+z = x + y;
+</code>
+```
+
+Notice that the `<code>` element does not preserve extra whitespace and line-breaks.
+
+To fix this, you can put the `<code>` element inside a **`<pre>`** element:
+
+```html
+<pre>
+<code>
+x = 5;
+y = 6;
+z = x + y;
+</code>
+</pre>
+```
+
+#### HTML `<var>` For Variables
+
+The HTML **`<var>`** element defines a variable.
+
+The variable could be a variable in a mathematical expression or a variable in programming context:
+
+```html
+Einstein wrote: <var>E</var> = <var>mc</var><sup>2</sup>.
+```
+

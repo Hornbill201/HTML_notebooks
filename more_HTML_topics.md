@@ -198,3 +198,20 @@ Here is the list of `<form>` attributes:
 | novalidate     | Specifies that the browser should not validate the form. |
 | target         | Specifies the target of the address in the action attribute (default: _self). |
 
+### HTML Form Elements
+
+This chapter describes all HTML form elements.
+
+#### The `<input>` Element
+
+The most important form element is the **`<input>`** element.
+
+The `<input>` element can be displayed in several ways, depending on the **type** attribute.
+
+```html
+<input name="firstname" type="text">
+```
+
+If the **type **attribute is omitted, the input field gets the default type: "text".
+
+All the different input types are covered in the next chapter.

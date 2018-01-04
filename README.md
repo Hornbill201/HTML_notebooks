@@ -2346,3 +2346,73 @@ The default character-set in HTML5 is UTF-8.
 
 For a complete reference of all URL encodings, visit our [URL Encoding Reference](https://www.w3schools.com/tags/ref_urlencode.asp).
 
+### HTML and XHTML
+
+XHTML is HTML written as XML.
+
+#### What Is XHTML?
+
+- XHTML stands for E**X**tensible **H**yper**T**ext **M**arkup **L**anguage
+- XHTML is almost identical to HTML
+- XHTML is stricter than HTML
+- XHTML is HTML defined as an XML application
+- XHTML is supported by all major browsers
+
+#### Why XHTML?
+
+Many pages on the internet contain "bad" HTML.
+
+This HTML code works fine in most browsers (even if it does not follow the HTML rules):
+
+```html
+<html>
+<head>
+  <title>This is bad HTML</title>
+
+<body>
+  <h1>Bad HTML
+  <p>This is a paragraph
+</body>
+```
+
+Today's market consists of different browser technologies. Some browsers run on computers, and some browsers run on mobile phones or other small devices. Smaller devices often lack the resources or power to interpret "bad" markup.
+
+XML is a markup language where documents must be marked up correctly (be "well-formed").
+
+If you want to study XML, please read our [XML tutorial](https://www.w3schools.com/xml/default.asp).
+
+By combining the strengths of HTML and XML, XHTML was developed.
+
+XHTML is HTML redesigned as XML.
+
+#### The Most Important Differences from HTML:
+
+#### Document Structure
+
+- XHTML DOCTYPE is **mandatory**
+- The xmlns attribute in <html> is **mandatory**
+- <html>, <head>, <title>, and <body> are **mandatory**
+
+#### XHTML Elements
+
+- XHTML elements must be **properly nested**
+- XHTML elements must always be **closed**
+- XHTML elements must be in **lowercase**
+- XHTML documents must have **one root element**
+
+#### XHTML Attributes
+
+- Attribute names must be in **lower case**
+- Attribute values must be **quoted**
+- Attribute minimization is **forbidden**
+
+
+
+#### How to Convert from HTML to XHTML
+
+1. Add an XHTML <!DOCTYPE> to the first line of every page
+2. Add an xmlns attribute to the html element of every page
+3. Change all element names to lowercase
+4. Close all empty elements
+5. Change all attribute names to lowercase
+6. Quote all attribute values

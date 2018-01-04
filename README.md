@@ -2195,3 +2195,83 @@ I will display €
 
 [Full Symbols Reference](https://www.w3schools.com/charsets/ref_utf_symbols.asp)
 
+### HTML Encoding (Character Sets)
+
+To display an HTML page correctly, a web browser must know which character set (character encoding) to use.
+
+#### What is Character Encoding?
+
+ASCII was the first **character encoding standard** (also called character set). ASCII defined 128 different alphanumeric characters that could be used on the internet: numbers (0-9), English letters (A-Z), and some special characters like ! $ + - ( ) @ < > .
+
+ANSI (Windows-1252) was the original Windows character set, with support for 256 different character codes.
+
+ISO-8859-1 was the default character set for HTML 4. This character set also supported 256 different character codes.
+
+Because ANSI and ISO-8859-1 were so limited, HTML 4 also supported UTF-8.
+
+UTF-8 (Unicode) covers almost all of the characters and symbols in the world.
+
+The default character encoding for HTML5 is UTF-8.
+
+#### The HTML charset Attribute
+
+To display an HTML page correctly, a web browser must know the character set used in the page.
+
+This is specified in the `<meta>` tag:
+
+##### For HTML4:
+
+```html
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">
+```
+
+##### For HTML5:
+
+```html
+<meta charset="UTF-8">
+```
+
+If a browser detects ISO-8859-1 in a web page, it defaults to ANSI, because ANSI is identical to ISO-8859-1 except that ANSI has 32 extra characters.
+
+#### Differences Between Character Sets
+
+The following table displays the differences between the character sets described above:
+
+[List on w3schools](https://www.w3schools.com/html/html_charset.asp)
+
+#### The ASCII Character Set
+
+ASCII uses the values from 0 to 31 (and 127) for control characters.
+
+ASCII uses the values from 32 to 126 for letters, digits, and symbols.
+
+ASCII does not use the values from 128 to 255.
+
+#### The ANSI Character Set (Windows-1252)
+
+ANSI is identical to ASCII for the values from 0 to 127.
+
+ANSI has a proprietary set of characters for the values from 128 to 159.
+
+ANSI is identical to UTF-8 for the values from 160 to 255.
+
+#### The ISO-8859-1 Character Set
+
+8859-1 is identical to ASCII for the values from 0 to 127.
+
+8859-1 does not use the values from 128 to 159.
+
+8859-1 is identical to UTF-8 for the values from 160 to 255.
+
+#### The UTF-8 Character Set
+
+UTF-8 is identical to ASCII for the values from 0 to 127.
+
+UTF-8 does not use the values from 128 to 159. 
+
+UTF-8 is identical to both ANSI and 8859-1 for the values from 160 to 255.
+
+UTF-8 continues from the value 256 with more than 10 000 different characters.
+
+For a closer look, study our [Complete HTML Character Set Reference](https://www.w3schools.com/charsets/default.asp).
+

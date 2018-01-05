@@ -363,3 +363,287 @@ Perform a calculation and show the result in an `<output>` element:
 | `<datalist>` | Specifies a list of pre-defined options for input controls (HTML5) |
 | `<output>`   | Defines the result of a calculation (HTML5) |
 
+### HTML Input Types
+
+This chapter describes the different input types for the <input> element.
+
+#### Input Type Text
+
+**`<input type="text">`** defines a **one-line text input field**:
+
+```html
+<form>
+  First name:<br>
+  <input type="text" name="firstname"><br>
+  Last name:<br>
+  <input type="text" name="lastname">
+</form>
+```
+
+#### Input Type Password
+
+**`<input type="password">`** defines a **password field**:
+
+```html
+<form>
+  User name:<br>
+  <input type="text" name="username"><br>
+  User password:<br>
+  <input type="password" name="psw">
+</form>
+```
+
+#### Input Type Submit
+
+**`<input type="submit">`** defines a button for **submitting** form data to a **form-handler**.
+
+The form-handler is typically a server page with a script for processing input data.
+
+The form-handler is specified in the form's **action** attribute:
+
+```html
+<form action="/action_page.php">
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey"><br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse"><br><br>
+  <input type="submit" value="Submit">
+</form>
+```
+
+If you omit the submit button's value attribute, the button will get a default text:
+
+```html
+<form action="/action_page.php">
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey"><br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse"><br><br>
+  <input type="submit">
+</form>
+```
+
+#### Input Type Reset
+
+**`<input type="reset">`** defines a **reset button** that will reset all form values to their default values:
+
+```html
+<form action="/action_page.php">
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey"><br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse"><br><br>
+  <input type="submit" value="Submit">
+  <input type="reset">
+</form>
+```
+
+#### Input Type Radio
+
+**`<input type="radio">`** defines a **radio button**.
+
+Radio buttons let a user select ONLY ONE of a limited number of choices:
+
+```html
+<form>
+  <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other
+</form>
+```
+
+#### Input Type Checkbox
+
+**`<input type="checkbox">`** defines a **checkbox**.
+
+Checkboxes let a user select ZERO or MORE options of a limited number of choices.
+
+```html
+<form>
+  <input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>
+  <input type="checkbox" name="vehicle2" value="Car"> I have a car 
+</form>
+```
+
+#### Input Type Button
+
+**`<input type="button">`** defines a **button**:
+
+```html
+<input type="button" onclick="alert('Hello World!')" value="Click Me!">
+```
+
+
+
+#### HTML5 Input Types
+
+HTML5 added several new input types:
+
+- color
+- date
+- datetime-local
+- email
+- month
+- number
+- range
+- search
+- tel
+- time
+- url
+- week
+
+New input types that are not supported by older web browsers, will behave as <input type="text">.
+
+#### Input Type Color
+
+The **`<input type="color">`** is used for input fields that should contain a color.
+
+Depending on browser support, a color picker can show up in the input field.
+
+```html
+<form>
+  Select your favorite color:
+  <input type="color" name="favcolor">
+</form>
+```
+
+#### Input Type Date
+
+The **`<input type="date">`** is used for input fields that should contain a date.
+
+Depending on browser support, a date picker can show up in the input field.
+
+```html
+<form>
+  Birthday:
+  <input type="date" name="bday">
+</form>
+```
+
+You can also add restrictions to dates:
+
+```html
+<form>
+  Enter a date before 1980-01-01:
+  <input type="date" name="bday" max="1979-12-31"><br>
+  Enter a date after 2000-01-01:
+  <input type="date" name="bday" min="2000-01-02"><br>
+</form>
+```
+
+#### Input Type Datetime-local
+
+The **`<input type="datetime-local">`** specifies a date and time input field, with no time zone.
+
+Depending on browser support, a date picker can show up in the input field.
+
+```html
+<form>
+  Birthday (date and time):
+  <input type="datetime-local" name="bdaytime">
+</form>
+```
+
+#### Input Type Email
+
+The **`<input type="email">`** is used for input fields that should contain an e-mail address.
+
+Depending on browser support, the e-mail address can be automatically validated when submitted.
+
+Some smartphones recognize the email type, and adds ".com" to the keyboard to match email input.
+
+#### Input Type Month
+
+The **`<input type="month">`** allows the user to select a month and year.
+
+Depending on browser support, a date picker can show up in the input field.
+
+#### Input Type Number
+
+The **`<input type="number">`** defines a **numeric** input field.
+
+You can also set restrictions on what numbers are accepted.
+
+The following example displays a numeric input field, where you can enter a value from 1 to 5:
+
+```html
+<form>
+  Quantity (between 1 and 5):
+  <input type="number" name="quantity" min="1" max="5">
+</form>
+```
+
+## Input Restrictions
+
+Here is a list of some common input restrictions (some are new in HTML5):
+
+| Attribute | Description                              |
+| --------- | ---------------------------------------- |
+| disabled  | Specifies that an input field should be disabled |
+| max       | Specifies the maximum value for an input field  (**HTML5**) |
+| maxlength | Specifies the maximum number of character for an input field |
+| min       | Specifies the minimum value for an input field  (**HTML5**) |
+| pattern   | Specifies a regular expression to check the input value against  (**HTML5**) |
+| readonly  | Specifies that an input field is read only (cannot be changed) |
+| required  | Specifies that an input field is required (must be filled out)  (**HTML5**) |
+| size      | Specifies the width (in characters) of an input field |
+| step      | Specifies the legal number intervals for an input field  (**HTML5**) |
+| value     | Specifies the default value for an input field |
+
+You will learn more about input restrictions in the next chapter.
+
+The following example displays a numeric input field, where you can enter a value from 0 to 100, in steps of 10. The default value is 30:
+
+```html
+<form>
+  Quantity:
+  <input type="number" name="points" min="0" max="100" step="10" value="30">
+</form>
+```
+
+#### Input Type Range
+
+The **`<input type="range">`** defines a control for entering a number whose exact value is not important (like a slider control). Default range is 0 to 100. However, you can set restrictions on what numbers are accepted with the min, max, and step attributes:
+
+```html
+<form>
+  <input type="range" name="points" min="0" max="10">
+</form>
+```
+
+#### Input Type Search
+
+The **`<input type="search">`** is used for search fields (a search field behaves like a regular text field).
+
+```html
+<form>
+  Search Google:
+  <input type="search" name="googlesearch">
+</form>
+```
+
+#### Input Type Tel
+
+The **`<input type="tel">`** is used for input fields that should contain a telephone number.
+
+The tel type is currently supported only in Safari 8.
+
+#### Input Type Time
+
+The **`<input type="time">`** allows the user to select a time (no time zone).
+
+Depending on browser support, a time picker can show up in the input field.
+
+#### Input Type Url
+
+The **`<input type="url">`** is used for input fields that should contain a URL address.
+
+Depending on browser support, the url field can be automatically validated when submitted.
+
+Some smartphones recognize the url type, and adds ".com" to the keyboard to match url input.
+
+#### Input Type Week
+
+The **`<input type="week">`** allows the user to select a week and year.
+
+Depending on browser support, a date picker can show up in the input field.

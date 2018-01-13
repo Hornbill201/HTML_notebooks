@@ -573,7 +573,7 @@ The following example displays a numeric input field, where you can enter a valu
 </form>
 ```
 
-## Input Restrictions
+#### Input Restrictions
 
 Here is a list of some common input restrictions (some are new in HTML5):
 
@@ -647,3 +647,299 @@ Some smartphones recognize the url type, and adds ".com" to the keyboard to matc
 The **`<input type="week">`** allows the user to select a week and year.
 
 Depending on browser support, a date picker can show up in the input field.
+
+### HTML Input Attributes
+
+#### The value Attribute
+
+The **value** attribute specifies the initial value for an input field:
+
+```html
+<form action="">
+First name:<br>
+<input type="text" name="firstname" value="John">
+</form>
+```
+
+#### The readonly Attribute
+
+The **readonly** attribute specifies that the input field is read only (cannot be changed):
+
+```html
+<form action="">
+First name:<br>
+<input type="text" name="firstname" value="John" readonly>
+</form>
+```
+
+#### The disabled Attribute
+
+The **disabled** attribute specifies that the input field is disabled.
+
+A disabled input field is unusable and un-clickable, and its value will not be sent when submitting the form:
+
+```html
+<form action="">
+First name:<br>
+<input type="text" name="firstname" value="John" disabled>
+</form>
+```
+
+#### The size Attribute
+
+The **size** attribute specifies the size (in characters) for the input field:
+
+```html
+<form action="">
+First name:<br>
+<input type="text" name="firstname" value="John" size="40">
+</form>
+```
+
+####  The maxlength Attribute
+
+The **maxlength** attribute specifies the maximum allowed length for the input field:
+
+```html
+<form action="">
+First name:<br>
+<input type="text" name="firstname" maxlength="10">
+</form>
+```
+
+With a maxlength attribute, the input field will not accept more than the allowed number of characters.
+
+The maxlength attribute does not provide any feedback. If you want to alert the user, you must write JavaScript code.
+
+**Note:** Input restrictions are not foolproof, and JavaScript provides many ways to add illegal input. To safely restrict input, it must be checked by the receiver (the server) as well!
+
+#### HTML5 Attributes
+
+HTML5 added the following attributes for `<input>`:
+
+- autocomplete
+- autofocus
+- form
+- formaction
+- formenctype
+- formmethod
+- formnovalidate
+- formtarget
+- height and width
+- list
+- min and max
+- multiple
+- pattern (regexp)
+- placeholder
+- required
+- step
+
+and the following attributes for `<form>`:
+
+- autocomplete
+- novalidate
+
+
+
+#### The autocomplete Attribute
+
+The **autocomplete** attribute specifies whether a form or input field should have autocomplete on or off.
+
+When autocomplete is on, the browser automatically completes the input values based on values that the user has entered before.
+
+**Tip:** It is possible to have autocomplete "on" for the form, and "off" for specific input fields, or vice versa.
+
+The autocomplete attribute works with `<form>` and the following `<input>` types: text, search, url, tel, email, password, datepickers, range, and color.
+
+An HTML form with autocomplete on (and off for one input field):
+
+```html
+<form action="/action_page.php" autocomplete="on">
+  First name:<input type="text" name="fname"><br>
+  Last name: <input type="text" name="lname"><br>
+  E-mail: <input type="email" name="email" autocomplete="off"><br>
+  <input type="submit">
+</form>
+```
+
+#### The novalidate Attribute
+
+The **novalidate** attribute is a `<form>` attribute.
+
+When present, novalidate specifies that the form data should not be validated when submitted.
+
+Indicates that the form is not to be validated on submit:
+
+```HTML
+<form action="/action_page.php" novalidate>
+  E-mail: <input type="email" name="user_email">
+  <input type="submit">
+</form>
+```
+
+#### The autofocus Attribute
+
+The **autofocus** attribute specifies that the input field should automatically get focus when the page loads.
+
+Let the "First name" input field automatically get focus when the page loads:
+
+```html
+First name:<input type="text" name="fname" autofocus>
+```
+
+#### The form Attribute
+
+The **form** attribute specifies one or more forms an <input> element belongs to.
+
+**Tip:** To refer to more than one form, use a space-separated list of form ids.
+
+```html
+<form action="/action_page.php" id="form1">
+  First name: <input type="text" name="fname"><br>
+  <input type="submit" value="Submit">
+</form>
+
+Last name: <input type="text" name="lname" form="form1">
+```
+
+#### The formaction Attribute
+
+The **formaction** attribute specifies the URL of a file that will process the input control when the form is submitted.
+
+The formaction attribute overrides the action attribute of the `<form>` element.
+
+The formaction attribute is used with type="submit" and type="image".
+
+```html
+<form action="/action_page.php">
+  First name: <input type="text" name="fname"><br>
+  Last name: <input type="text" name="lname"><br>
+  <input type="submit" value="Submit"><br>
+  <input type="submit" formaction="/action_page2.php"
+  value="Submit as admin">
+</form>
+```
+
+#### The formenctype Attribute
+
+The **formenctype** attribute specifies how the form data should be encoded when submitted (only for forms with method="post").
+
+The formenctype attribute overrides the enctype attribute of the `<form>` element.
+
+The formenctype attribute is used with type="submit" and type="image".
+
+```html
+<form action="/action_page_binary.asp" method="post">
+  First name: <input type="text" name="fname"><br>
+  <input type="submit" value="Submit">
+  <input type="submit" formenctype="multipart/form-data"
+  value="Submit as Multipart/form-data">
+</form>
+```
+
+#### The formmethod Attribute
+
+The **formmethod** attribute defines the HTTP method for sending form-data to the action URL.
+
+The formmethod attribute overrides the method attribute of the `<form>` element.
+
+The formmethod attribute can be used with type="submit" and type="image".
+
+The second submit button overrides the HTTP method of the form:
+
+```html
+<form action="/action_page.php" method="get">
+  First name: <input type="text" name="fname"><br>
+  Last name: <input type="text" name="lname"><br>
+  <input type="submit" value="Submit">
+  <input type="submit" formmethod="post" value="Submit using POST">
+</form>
+```
+
+#### The formnovalidate Attribute
+
+The **formnovalidate** attribute overrides the novalidate attribute of the `<form>` element.
+
+The formnovalidate attribute can be used with type="submit".
+
+A form with two submit buttons (with and without validation):
+
+```html
+<form action="/action_page.php">
+  E-mail: <input type="email" name="userid"><br>
+  <input type="submit" value="Submit"><br>
+  <input type="submit" formnovalidate value="Submit without validation">
+</form>
+```
+
+#### The formtarget Attribute
+
+The **formtarget** attribute specifies a name or a keyword that indicates where to display the response that is received after submitting the form.
+
+The formtarget attribute overrides the target attribute of the `<form>` element.
+
+The formtarget attribute can be used with type="submit" and type="image".
+
+A form with two submit buttons, with different target windows:
+
+```html
+<form action="/action_page.php">
+  First name: <input type="text" name="fname"><br>
+  Last name: <input type="text" name="lname"><br>
+  <input type="submit" value="Submit as normal">
+  <input type="submit" formtarget="_blank"
+  value="Submit to a new window">
+</form>
+```
+
+#### The height and width Attributes
+
+The **height** and **width** attributes specify the height and width of an `<input type="image">` element.
+
+Always specify the size of images. If the browser does not know the size, the page will flicker while images load.
+
+Define an image as the submit button, with height and width attributes:
+
+```html
+<input type="image" src="img_submit.gif" alt="Submit" width="48" height="48">
+```
+
+#### The list Attribute
+
+The **list** attribute refers to a `<datalist>` element that contains pre-defined options for an `<input>` element.
+
+An `<input>` element with pre-defined values in a `<datalist>`:
+
+```html
+<input list="browsers">
+
+<datalist id="browsers">
+  <option value="Internet Explorer">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
+```
+
+#### The min and max Attributes
+
+The **min** and **max** attributes specify the minimum and maximum values for an `<input>` element.
+
+The min and max attributes work with the following input types: number, range, date, datetime-local, month, time and week.
+
+#### The multiple Attribute
+
+The **multiple** attribute specifies that the user is allowed to enter more than one value in the `<input>` element.
+
+The multiple attribute works with the following input types: email, and file.
+
+#### The pattern Attribute
+
+The **pattern** attribute specifies a regular expression that the `<input>` element's value is checked against.
+
+The pattern attribute works with the following input types: text, search, url, tel, email, and password.
+
+**Tip:** Use the global [title](https://www.w3schools.com/tags/att_global_title.asp) attribute to describe the pattern to help the user.
+
+**Tip:** Learn more about [regular expressions](https://www.w3schools.com/js/js_regexp.asp) in our JavaScript tutorial.

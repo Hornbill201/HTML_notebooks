@@ -943,3 +943,38 @@ The pattern attribute works with the following input types: text, search, url, t
 **Tip:** Use the global [title](https://www.w3schools.com/tags/att_global_title.asp) attribute to describe the pattern to help the user.
 
 **Tip:** Learn more about [regular expressions](https://www.w3schools.com/js/js_regexp.asp) in our JavaScript tutorial.
+
+An input field that can contain only three letters (no numbers or special characters):
+
+```html
+Country code: <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">
+```
+
+#### The placeholder Attribute
+
+The **placeholder** attribute specifies a hint that describes the expected value of an input field (a sample value or a short description of the format).
+
+The hint is displayed in the input field before the user enters a value.
+
+The placeholder attribute works with the following input types: text, search, url, tel, email, and password.
+
+```html
+<input type="text" name="fname" placeholder="First name">
+```
+
+#### The required Attribute
+
+The **required** attribute specifies that an input field must be filled out before submitting the form.
+
+The required attribute works with the following input types: text, search, url, tel, email, password, date pickers, number, checkbox, radio, and file.
+
+#### The step Attribute
+
+The **step** attribute specifies the legal number intervals for an `<input>` element.
+
+Example: if step="3", legal numbers could be -3, 0, 3, 6, etc.
+
+**Tip:** The step attribute can be used together with the max and min attributes to create a range of legal values.
+
+The step attribute works with the following input types: number, range, date, datetime-local, month, time and week.
+

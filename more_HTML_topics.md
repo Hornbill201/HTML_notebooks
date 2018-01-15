@@ -978,3 +978,95 @@ Example: if step="3", legal numbers could be -3, 0, 3, 6, etc.
 
 The step attribute works with the following input types: number, range, date, datetime-local, month, time and week.
 
+## HTML5 Segmantics
+
+Semantics is the study of the meanings of words and phrases in a language.
+
+Semantic elements = elements with a meaning.
+
+#### What are Semantic Elements?
+
+A semantic element clearly describes its meaning to both the browser and the developer.
+
+Examples of **non-semantic** elements: `<div>` and `<span>` - Tells nothing about its content.
+
+Examples of **semantic** elements: `<form>`, `<table>`, and `<article>` - Clearly defines its content.
+
+## New Semantic Elements in HTML5
+
+Many web sites contain HTML code like: <div id="nav"> <div class="header"> <div id="footer">
+to indicate navigation, header, and footer.
+
+HTML5 offers new semantic elements to define different parts of a web page:  
+
+- <article>
+- <aside>
+- <details>
+- <figcaption>
+- <figure>
+- <footer>
+- <header>
+- <main>
+- <mark>
+- <nav>
+- <section>
+- <summary>
+- <time>
+
+![HTML5 Semantic Elements](./imgs/img_sem_elements2.gif)
+
+### HTML5 `<section>` Element
+
+The `<section>` element defines a section in a document.
+
+According to W3C's HTML5 documentation: "A section is a thematic grouping of content, typically with a heading."
+
+A home page could normally be split into sections for introduction, content, and contact information.
+
+### HTML5 `<article>` Element
+
+The `<article>` element specifies independent, self-contained content.
+
+An article should make sense on its own, and it should be possible to read it independently from the rest of the web site.
+
+Examples of where an `<article>` element can be used:
+
+- Forum post
+- Blog post
+- Newspaper article
+
+
+
+## HTML5 `<footer>` Element
+
+The `<footer>` element specifies a footer for a document or section.
+
+A `<footer>` element should contain information about its containing element.
+
+A footer typically contains the author of the document, copyright information, links to terms of use, contact information, etc.
+
+You may have several `<footer>` elements in one document.
+
+### HTML5 `<nav>` Element
+
+The `<nav>` element defines a set of navigation links.
+
+Notice that NOT all links of a document should be inside a `<nav>` element. The `<nav>` element is intended only for major block of navigation links.
+
+### HTML5 `<aside>` Element
+
+The `<aside>` element defines some content aside from the content it is placed in (like a sidebar).
+
+### HTML5 `<figure>` and `<figcaption>` Elements
+
+The purpose of a figure caption is to add a visual explanation to an image.
+
+In HTML5, an image and a caption can be grouped together in a **`<figure>`** element:The aside content should be related to the surrounding content.
+
+```html
+<figure>
+  <img src="pic_mountain.jpg" alt="The Pulpit Rock" width="304" height="228">
+  <figcaption>Fig1. - The Pulpit Rock, Norway.</figcaption>
+</figure>
+```
+

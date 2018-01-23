@@ -1,5 +1,7 @@
 # More Topics on HTML
 
+This is the note of the HTML tutorial on w3schools. Link: https://www.w3schools.com/html/
+
 ## HTML Forms
 
 ### HTML Forms

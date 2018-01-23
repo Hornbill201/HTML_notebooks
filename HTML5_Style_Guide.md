@@ -1,5 +1,7 @@
 # HTML5 Style Guide and Coding Conventions
 
+This is the note of HTML tutorial on w3schools. Link: https://www.w3schools.com/html/html5_syntax.asp
+
 ## HTML Coding Conventions
 
 Web developers are often uncertain about the coding style and syntax to use in HTML.

@@ -1,5 +1,5 @@
 # HTML notebooks
-This is the Notebook of HTML from w3schools. 
+This is the note of HTML tutorial on w3schools. Link: https://www.w3schools.com/html/ 
 
 ## A Simple HTML Document
 
